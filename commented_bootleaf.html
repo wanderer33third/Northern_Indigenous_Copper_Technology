@@ -329,14 +329,14 @@
                                     <div class="panel-body" style="padding: 0px 15px;">
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="basemapLayers" id="mapquestOSM">
-                                                Streets
+                                                <input type="radio" name="basemapLayers" id="mapquestOAM" checked>
+                                                Imagery
                                             </label>
                                         </div>
                                         <div class="radio">
                                             <label>
-                                                <input type="radio" name="basemapLayers" id="mapquestOAM" checked>
-                                                Imagery
+                                                <input type="radio" name="basemapLayers" id="mapquestOSM">
+                                                Streets
                                             </label>
                                         </div>
                                         <div class="radio">
@@ -738,7 +738,7 @@
                 zoom: 3,
                 maxZoom: 3,
                 center: [68, -113],
-                layers: [mapquestOSM, cemeteries, cremation]
+                layers: [mapquestOAM, cemeteries, cremation]
             });
 
 			var hash = new L.Hash(map);
