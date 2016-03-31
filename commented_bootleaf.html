@@ -563,6 +563,7 @@
           type="text/javascript"
           src="assets/leaflet-hash.js">
           </script>
+        <!--<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.3.1/leaflet-omnivore.min.js'></script>-->
         <script type="text/javascript">
 
 
@@ -659,9 +660,9 @@
                 subdomains: ["oatile1", "oatile2", "oatile3", "oatile4"],
                 attribution: 'Labels courtesy of <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> <img src="http://developer.mapquest.com/content/osm/mq_logo.png">. Map data (c) <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, CC-BY-SA. Portions Courtesy NASA/JPL-Caltech and U.S. Depart. of Agriculture, Farm Service Agency'
             })]);
-            // Overlay Layers
+// Overlay Layers
 
-
+      //converting .geoJson to a point on the map
             var cremation = L.geoJson(null, {
                 pointToLayer: function (feature, latlng) {
                     return L.marker(latlng, {
@@ -713,6 +714,8 @@
                     }
                 }
             });
+
+//This is where the geoJSON file gets pulled in, but how do i convert .csv to .geojson?
             $.getJSON("data/ieldran_cremation.geojson", function (data) {
                 cremation.addData(data);
             });
